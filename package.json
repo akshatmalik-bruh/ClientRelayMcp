@@ -1,0 +1,45 @@
+{
+  "type": "module",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "better-sqlite3": "^12.9.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^25.6.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.3"
+  },
+  "name": "chat-relay-mcp",
+  "version": "1.0.1",
+  "description": "Powerful Cross-IDE Context Sharing via MCP. Persistently sync AI memories and chat sessions between Cursor, VS Code, and more.",
+  "author": "Antigravity",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/chat-relay-mcp"
+  },
+  "keywords": [
+    "mcp-server",
+    "model-context-protocol",
+    "ai-context",
+    "chat-relay",
+    "cursor-ide",
+    "ide-sync",
+    "llm-memory"
+  ],
+  "main": "dist/index.js",
+  "bin": {
+    "chat-relay-mcp": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "files": [
+    "dist"
+  ]
+}

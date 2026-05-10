@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #00ffff;
+  --color-primary-dark: #00cccc;
+  
+  --color-dark: #000000;
+  --color-dark-lighter: #111111;
+  
+  --color-brand-purple: #ff00ff;
+  --color-brand-blue: #00ffff;
+
+  --font-sans: 'VT323', monospace;
+  --font-display: 'Press Start 2P', system-ui;
+  --font-mono: 'VT323', monospace;
+
+  --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@layer base {
+  :root {
+    --background: #000000;
+    --foreground: #e0ffff;
+    color-scheme: dark;
+  }
+
+  html, body {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    @apply antialiased font-mono selection:bg-brand-purple/50;
+  }
+  
+  a, button {
+    @apply transition-colors;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-black/90 backdrop-blur-none border-b border-brand-blue/30 shadow-[0_4px_15px_rgba(0,255,255,0.1)];
+  }
+  
+  .glass-card {
+    @apply bg-black border-2 border-brand-blue/40 hover:border-brand-purple hover:shadow-[0_0_20px_rgba(255,0,255,0.4)] transition-all duration-300 shadow-[0_0_10px_rgba(0,255,255,0.1)];
+  }
+
+  .btn-gradient {
+    @apply bg-transparent border-2 border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-black hover:shadow-[0_0_20px_rgba(0,255,255,0.6)] transition-all font-display px-6 py-3 shadow-[0_0_10px_rgba(0,255,255,0.3)] text-xs md:text-sm;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* ─── Scroll Reveal System ─── */
+  .scroll-reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+  }
+
+  .scroll-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Stagger delays for child elements */
+  .scroll-reveal-stagger > *:nth-child(1) { transition-delay: 0ms; }
+  .scroll-reveal-stagger > *:nth-child(2) { transition-delay: 120ms; }
+  .scroll-reveal-stagger > *:nth-child(3) { transition-delay: 240ms; }
+  .scroll-reveal-stagger > *:nth-child(4) { transition-delay: 360ms; }
+  .scroll-reveal-stagger > *:nth-child(5) { transition-delay: 480ms; }
+  .scroll-reveal-stagger > *:nth-child(6) { transition-delay: 600ms; }
+
+  /* Slide from left variant */
+  .scroll-reveal-left {
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .scroll-reveal-left.is-visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  /* Scale in variant */
+  .scroll-reveal-scale {
+    opacity: 0;
+    transform: scale(0.92) translateY(30px);
+    transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .scroll-reveal-scale.is-visible {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+
+

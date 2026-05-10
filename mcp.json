@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "chat-relay": {
+      "command": "node",
+      "args": ["d:/mcplearnings/MCP_Project/dist/index.js"]
+    }
+  }
+}
