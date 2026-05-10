@@ -43,7 +43,7 @@ const Hero = () => {
           transition={{ duration: 0.6 }}
           className="mb-4 text-[11px] md:text-[14px] font-mono font-bold text-brand-purple tracking-[0.4em] uppercase opacity-80"
         >
-          VERSION 1.0.0
+          VERSION 1.0.2
         </motion.div>
 
         {/* Centered Heading - Reverted to Original Gradient */}

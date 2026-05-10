@@ -6,18 +6,36 @@
 
 **Chat Relay MCP** is a high-fidelity Model Context Protocol server designed to bridge the gap between AI-powered IDEs. It provides a persistent, local-first bridge to sync chat sessions, AI memories, and project context across Cursor, Antigravity, VS Code, and more.
 
+> [!NOTE]
+> **Compatibility:** Tested and optimized for **Cursor** and **Antigravity**.
+
 ## ✨ Key Features
 
 - **Persistent Continuity:** Automatically saves and syncs AI memories across separate sessions using a local SQLite database.
-- **Cross-IDE Handoff:** Effortlessly transfer conversation context between different AI assistants (e.g., from Cursor to Antigravity).
+- **Cross-IDE Handoff:** Effortlessly transfer conversation context between different IDE (e.g., from Cursor to Antigravity).
 - **Zod-Validated Integrity:** Strict schema validation ensures AI-generated data is clean, structured, and free from hallucinations.
 - **Local-First Privacy:** All data stays on your machine. No external cloud dependencies or third-party storage.
 
 ## 🚀 Quick Start
 
-Add the server to your MCP configuration file (usually found at `~/Library/Application Support/Code/User/globalStorage/saoudrizwan.claude-dev/settings/mcp_settings.json` or equivalent for your IDE).
+To use Chat Relay, you need to add it to your IDE's MCP configuration.
 
-### Configuration
+### 1. Configuration for Cursor
+1. Open **Cursor Settings** (Gear icon or `Cmd/Ctrl + Shift + J`).
+2. Navigate to **General** -> **MCP**.
+3. Click on **+ Add New MCP Server**.
+4. Set the name to `chat-relay`.
+5. Set the type to `command`.
+6. Paste the following into the **Command** field:
+   ```bash
+   npx -y chat-relay-mcp
+   ```
+
+### 2. Configuration for Antigravity
+1. Open **Antigravity Settings**.
+2. Go to **Advanced** -> **MCP Settings**.
+3. Click **Edit Config File**.
+4. Ensure your configuration includes the `chat-relay` entry inside the `mcpServers` block:
 
 ```json
 {
