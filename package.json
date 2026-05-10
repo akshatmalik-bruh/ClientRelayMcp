@@ -12,13 +12,13 @@
     "typescript": "^6.0.3"
   },
   "name": "chat-relay-mcp",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Powerful Cross-IDE Context Sharing via MCP. Persistently sync AI memories and chat sessions between Cursor, VS Code, and more.",
   "author": "Antigravity",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-username/chat-relay-mcp"
+    "url": "https://github.com/akshatmalik-bruh/ClientRelayMcp.git"
   },
   "keywords": [
     "mcp-server",

@@ -31,7 +31,7 @@ const Sidebar = () => {
         <div className="w-[2px] h-4 bg-white/40 mx-1 rounded-full" />
 
         <a
-          href="https://github.com/your-username/MCP_Project"
+          href="https://github.com/akshatmalik-bruh/ClientRelayMcp.git"
           target="_blank"
           className="p-3 rounded-full border border-transparent transition-all duration-300 hover:bg-white/20 hover:border-white hover:text-white text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.5)] hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.9)]"
           title="GitHub"

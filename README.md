@@ -49,8 +49,8 @@ If you want to modify the server or run it from source:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-username/chat-relay-mcp.git
-   cd chat-relay-mcp
+   git clone https://github.com/akshatmalik-bruh/ClientRelayMcp.git
+   cd ClientRelayMcp
    ```
 
 2. **Install dependencies:**

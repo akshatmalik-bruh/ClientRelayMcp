@@ -174,7 +174,7 @@ const Setup = () => {
                         </div>
                         <button
                           onClick={() => {
-                            navigator.clipboard.writeText("git clone https://github.com/your-username/chat-relay-mcp.git");
+                            navigator.clipboard.writeText("git clone https://github.com/akshatmalik-bruh/ClientRelayMcp.git");
                           }}
                           className="text-[10px] md:text-xs font-mono text-brand-purple/70 hover:text-brand-purple transition-colors flex items-center gap-1"
                         >
@@ -182,7 +182,7 @@ const Setup = () => {
                         </button>
                       </div>
                       <div className="bg-black/90 border-l-4 border-brand-purple p-4 md:p-6 font-[Consolas,Monaco,monospace] text-xs md:text-base leading-relaxed tracking-wide shadow-[inset_0_0_20px_rgba(255,0,255,0.05)] overflow-hidden">
-                        <code className="text-brand-blue break-all">git clone https://github.com/your-username/chat-relay-mcp.git</code>
+                        <code className="text-brand-blue break-all">git clone https://github.com/akshatmalik-bruh/ClientRelayMcp.git</code>
                       </div>
                     </div>
 
@@ -194,7 +194,7 @@ const Setup = () => {
                         </div>
                         <button
                           onClick={() => {
-                            navigator.clipboard.writeText("cd chat-relay-mcp && npm install && npm run build");
+                            navigator.clipboard.writeText("cd ClientRelayMcp && npm install && npm run build");
                           }}
                           className="text-[10px] md:text-xs font-mono text-brand-purple/70 hover:text-brand-purple transition-colors flex items-center gap-1"
                         >
@@ -202,7 +202,7 @@ const Setup = () => {
                         </button>
                       </div>
                       <div className="bg-black/90 border-l-4 border-brand-purple p-4 md:p-6 font-[Consolas,Monaco,monospace] text-xs md:text-base leading-relaxed tracking-wide shadow-[inset_0_0_20px_rgba(255,0,255,0.05)] overflow-hidden">
-                        <code className="text-brand-blue break-all">cd chat-relay-mcp && npm install && npm run build</code>
+                        <code className="text-brand-blue break-all">cd ClientRelayMcp && npm install && npm run build</code>
                       </div>
                     </div>
                   </div>
@@ -218,7 +218,7 @@ const Setup = () => {
                           const localJson = `{
   "chat-relay": {
     "command": "node",
-    "args": ["/ABSOLUTE/PATH/TO/chat-relay-mcp/dist/index.js"]
+    "args": ["/ABSOLUTE/PATH/TO/ClientRelayMcp/dist/index.js"]
   }
 }`;
                           navigator.clipboard.writeText(localJson);
